@@ -7,6 +7,7 @@
         </div>
         <router-view />
         <div id="single-spa-vue"></div>
+        <div id="single-spa-react"></div>
     </div>
 </template>
 
