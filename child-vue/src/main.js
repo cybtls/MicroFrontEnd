@@ -29,6 +29,7 @@ if (!window.singleSpaNavigate) {
     new Vue(vueOptions).$mount('#app');
 } else {
     //当作为子项目的时候，需要这个来修改加载路径，不然子项目加载js时会以父项目的端口去加载
+    //eslint-disable-next-line
     __webpack_public_path__ = "http://localhost:9999/"
 }
 

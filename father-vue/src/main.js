@@ -28,6 +28,19 @@ registerApplication(
     // 路径前面加上 /vue 
     location => location.pathname.startsWith('/vue'),
 );
+registerApplication(
+    // 子应用名称，就是我们vue.config.js里面的导出名称
+    'singleReact',
+    async () => {
+        //加载子项目的js模块，目前这里是先写死，后面会提到如何改造这个
+        await runScript('http://127.0.0.1:10000/static/js/bundle.js');
+        await runScript('http://127.0.0.1:10000/static/js/0.chunk.js');
+        await runScript('http://127.0.0.1:10000/static/js/main.chunk.js');
+        return window.singleReact;
+    },
+    // 路径前面加上 /vue 
+    location => location.pathname.startsWith('/react'),
+);
 
 start();
 new Vue({
