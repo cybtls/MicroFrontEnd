@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "single-spa-vue": "^1.9.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
@@ -36,7 +37,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+        "off":0
+    }
   },
   "browserslist": [
     "> 1%",

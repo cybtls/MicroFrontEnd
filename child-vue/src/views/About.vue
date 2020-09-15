@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div class="about">
+        <h1>我是子项目的single-spa-about</h1>
+        <router-link to="/">返回子项目</router-link>
+    </div>
 </template>
